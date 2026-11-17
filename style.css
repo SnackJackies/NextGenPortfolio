@@ -272,7 +272,7 @@ a:hover {
     border-left: 3px solid var(--special);
 }
 
-.gallery-2026-hide {
+.gallery-hide {
     display: none;
     transition: 0.2s
 }

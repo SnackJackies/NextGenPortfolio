@@ -9,17 +9,21 @@ const mail_input = document.querySelector("#mail-input")
 const mail_preview = document.querySelector("#mail-preview")
 
 const gallery_2026 = document.querySelector("#gallery-2026")
+const gallery_2025 = document.querySelector("#gallery-2025")
 
 let extend_button_status1 = false
 let extend_button_status2 = false
 
 let img2026 = []
+let img2025 = []
 
-for (let i = 1; i < 10; i++) {
+for (let i = 1; i <= 10; i++) {
     img2026.push(`<img src="resources/2026/${i}.png" alt="2026 img" height="256" class="gallery-img hoverable">`)
 }
 
-console.log(img2026);
+for (let i = 1; i <= 5; i++) {
+    img2025.push(`<img src="resources/2025/${i}.png" alt="2025 img" height="256" class="gallery-img hoverable">`)
+}
 
 
 if (extend_button1) {
@@ -27,7 +31,7 @@ if (extend_button1) {
 
     extend_button_status1 = !extend_button_status1
 
-        gallery_2026.classList.toggle("gallery-2026-hide")
+    gallery_2026.classList.toggle("gallery-hide")
 
     if (!extend_button_status1) {
         extend_button1.textContent = ">"
@@ -42,6 +46,8 @@ if (extend_button2) {
     extend_button2.addEventListener("click", () => {
 
     extend_button_status2 = !extend_button_status2
+
+    gallery_2025.classList.toggle("gallery-hide")
 
     if (!extend_button_status2) {
         extend_button2.textContent = ">"
@@ -89,3 +95,7 @@ for (image of img2026) {
     gallery_2026.innerHTML += image;
 }
 
+for (image of img2025) {
+    console.log(image);
+    gallery_2025.innerHTML += image;
+}
