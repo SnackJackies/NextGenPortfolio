@@ -17,6 +17,26 @@ let extend_button_status2 = false
 let img2026 = []
 let img2025 = []
 
+const card1 = document.querySelector("#card1");
+const card2 = document.querySelector("#card2");
+
+if (card1 && card2) {
+    fetch("message.json")
+    .then((response) => {
+        
+        return response.text()
+    })
+    .then((text) => {
+        let messageList = JSON.parse(text)
+
+
+        card1.textContent = messageList.card1
+        card2.textContent = messageList.card2
+    })
+}
+
+
+
 for (let i = 1; i <= 10; i++) {
     img2026.push(`<img src="resources/2026/${i}.png" alt="2026 img" height="256" class="gallery-img hoverable">`)
 }
@@ -90,12 +110,13 @@ if (mail_btn) {
 }
 
 
-for (image of img2026) {
-    console.log(image);
+
+if (gallery_2026 && gallery_2025) {
+    for (image of img2026) {
     gallery_2026.innerHTML += image;
 }
 
-for (image of img2025) {
-    console.log(image);
-    gallery_2025.innerHTML += image;
+    for (image of img2025) {
+        gallery_2025.innerHTML += image;
+    }
 }
