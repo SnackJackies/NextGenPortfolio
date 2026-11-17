@@ -3,13 +3,31 @@ const extend_button2 = document.querySelector(".extend-button2")
 
 const return_btns = document.querySelectorAll(".return")
 
+const exist_ul = document.querySelector(".exist-ul")
+const mail_btn = document.querySelector("#mail-btn")
+const mail_input = document.querySelector("#mail-input")
+const mail_preview = document.querySelector("#mail-preview")
+
+const gallery_2026 = document.querySelector("#gallery-2026")
+
 let extend_button_status1 = false
 let extend_button_status2 = false
 
+let img2026 = []
 
-extend_button1.addEventListener("click", () => {
+for (let i = 1; i < 10; i++) {
+    img2026.push(`<img src="resources/2026/${i}.png" alt="2026 img" height="256" class="gallery-img hoverable">`)
+}
+
+console.log(img2026);
+
+
+if (extend_button1) {
+    extend_button1.addEventListener("click", () => {
 
     extend_button_status1 = !extend_button_status1
+
+        gallery_2026.classList.toggle("gallery-2026-hide")
 
     if (!extend_button_status1) {
         extend_button1.textContent = ">"
@@ -17,8 +35,11 @@ extend_button1.addEventListener("click", () => {
         extend_button1.textContent = "∨"
     }
 })
+}
 
-extend_button2.addEventListener("click", () => {
+
+if (extend_button2) {
+    extend_button2.addEventListener("click", () => {
 
     extend_button_status2 = !extend_button_status2
 
@@ -28,3 +49,43 @@ extend_button2.addEventListener("click", () => {
         extend_button2.textContent = "∨"
     }
 })
+}
+
+let messenger_counter = 2
+
+if (mail_input) {
+    mail_input.addEventListener("input", () => {
+    mail_preview.textContent = "Message Preview: " + mail_input.value
+})
+}
+
+if (mail_btn) {
+    mail_btn.addEventListener("click", () => {
+    const messageDiv = document.createElement("div")
+
+    const authorli = document.createElement("li")
+    const messagep = document.createElement("p")
+
+    messenger_counter += 1
+
+    authorli.textContent = `#${messenger_counter} : Annonymous Messenger`
+    messagep.textContent = mail_input.value
+
+    messageDiv.append(authorli)
+    messageDiv.append(messagep)
+
+    if (mail_input.value.length > 0) {
+        messageDiv.classList.add("existBox")
+        exist_ul.append(messageDiv)
+    } else {
+        alert("Please write some message for me first! ")
+    }
+})
+}
+
+
+for (image of img2026) {
+    console.log(image);
+    gallery_2026.innerHTML += image;
+}
+

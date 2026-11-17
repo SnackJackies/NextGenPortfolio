@@ -12,6 +12,10 @@ html, body {
     font-family: Kanit;
     background-color: var(--secondary);
     scroll-behavior: smooth;
+    background-image:
+    linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 @keyframes fadeIn {
@@ -21,6 +25,21 @@ html, body {
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s forwards; /* duration and retain final state */
+}
+
+.fade-in-slower {
+  opacity: 0;
+  animation: fadeIn 2.5s forwards; /* duration and retain final state */
+}
+
+@keyframes slideDown {
+    from {transform: translateY(25px);}
+    to {transform: translateY(0);}
+}
+
+.slide-down {
+    transform: translate(25px);
+    animation: slideDown 0.5s forwards;
 }
 
 .hoverable {
@@ -59,6 +78,10 @@ a:hover {
     box-shadow: 5px 7.5px var(--special);
 }
 
+.upper-card img {
+    border-radius: 125px;
+}
+
 .heading p {
     color: var(--secondary);
 }
@@ -95,7 +118,7 @@ a:hover {
     border: 2px solid var(--special);
     border-radius: 25px;
     width: 17.5em;
-    height: 25em;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .status-card h3 {
@@ -173,15 +196,16 @@ a:hover {
     font-weight: bold;
     padding-left: 3.5em;
 }
+    /* 
+    .return a {
+        border: 2px solid var(--base);
+        padding: 0.45em 1.5em;
+        border-radius: 15px;
+    } */
 
-.return a {
-    border: 2px solid var(--base);
-    padding: 0.45em 1.5em;
-    border-radius: 15px;
-}
-
-.gallery {
-
+.gallery-img {
+    border-radius: 25px;
+    margin: 1.25em;
 }
 
 .mail-section {
@@ -237,5 +261,18 @@ a:hover {
 }
 
 .exist-section div {
-    margin: 4em 0;
+    margin: 2.5em 0;
+    padding-left: 4px;
+    border-left: 3px solid var(--special);
+}
+
+.exist-box {
+    margin: 2.5em 0;
+    padding-left: 4px;
+    border-left: 3px solid var(--special);
+}
+
+.gallery-2026-hide {
+    display: none;
+    transition: 0.2s
 }
