@@ -111,6 +111,11 @@ html, body {
     border-radius: 25px;
     width: 17.5em;
     background-color: rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(2px 2px 3.25px rgb(235, 179, 232));
+}
+
+.status-card:hover {
+    background-color: rgb(253, 145, 204, 0.5);
 }
 
 .status-card h3 {
@@ -125,8 +130,15 @@ html, body {
 .status-card a {
     font-size: 19px;
     text-decoration: none;
-    color: var(--special);
+    color: var(--base);
     margin-bottom: 17.5px;
+    transition: 0.2s;
+    font-weight: 650;
+}
+
+.status-card a:hover {
+    transition: 0.2s;
+    color: white;
 }
 
 .status-card div {
