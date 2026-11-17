@@ -38,11 +38,11 @@ if (card1 && card2) {
 
 
 for (let i = 1; i <= 10; i++) {
-    img2026.push(`<img src="resources/2026/${i}.png" alt="2026 img" height="256" class="gallery-img hoverable">`)
+    img2026.push(`<img src="../resources/2026/${i}.png" alt="2026 img" height="256" class="gallery-img hoverable">`)
 }
 
 for (let i = 1; i <= 5; i++) {
-    img2025.push(`<img src="resources/2025/${i}.png" alt="2025 img" height="256" class="gallery-img hoverable">`)
+    img2025.push(`<img src="../resources/2025/${i}.png" alt="2025 img" height="256" class="gallery-img hoverable">`)
 }
 
 
