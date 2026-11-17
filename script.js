@@ -20,8 +20,11 @@ let img2025 = []
 const card1 = document.querySelector("#card1");
 const card2 = document.querySelector("#card2");
 
+const myowngallery = document.querySelector("#myowngallery");
+const fakbok = document.querySelector("#fakbok")
+
 if (card1 && card2) {
-    fetch("message.json")
+    fetch("../message.json")
     .then((response) => {
         
         return response.text()
@@ -30,8 +33,11 @@ if (card1 && card2) {
         let messageList = JSON.parse(text)
 
 
-        card1.textContent = messageList.card1
-        card2.textContent = messageList.card2
+        card1.innerHTML = messageList.card1
+        card2.innerHTML = messageList.card2
+
+        myowngallery.innerHTML = messageList.myowngallery;
+        fakbok.innerHTML = messageList.fakbok;
     })
 }
 
@@ -108,8 +114,6 @@ if (mail_btn) {
     }
 })
 }
-
-
 
 if (gallery_2026 && gallery_2025) {
     for (image of img2026) {
