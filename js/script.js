@@ -24,7 +24,7 @@ const myowngallery = document.querySelector("#myowngallery");
 const fakbok = document.querySelector("#fakbok")
 
 if (card1 && card2) {
-    fetch("../message.json")
+    fetch("../json/message.json")
     .then((response) => {
         
         return response.text()
