@@ -53,14 +53,22 @@ a:hover {
 .upper-card {
     margin: 1.5em 14em;
     font-weight: 500;
-    background-color: transparent;
-    border: 2px solid black;
+    background-color: var(--base);
     border-radius: 45px;
-    padding: 2.5em
+    padding: 2.5em;
+    box-shadow: 5px 7.5px var(--special);
+}
+
+.heading p {
+    color: var(--secondary);
+}
+
+.heading p span {
+    color: var(--special);
 }
 
 .heading span {
-    color: var(--base);
+    color: var(--secondary);
 }
 
 #heading-desc {
@@ -101,8 +109,6 @@ a:hover {
 
 .middle-bg {
     width: 100%;
-    height: 25em;
-    background-color: var(--base);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -111,11 +117,13 @@ a:hover {
 .middle-bg div {
     margin-top: 3em;
     width: 50%;
+    padding-bottom: 5em;
 }
 
 .middle-bg h4 {
     margin: 1.5em 1.5em; 
     font-size: 60px;
+    color: var(--secondary)
 }
 
 .middle-bg p {
@@ -135,8 +143,9 @@ a:hover {
     margin: 0 0 0 2em;
 }
 
+
 .top-bar {
-    background-color: rgb(49, 45, 45);
+    background-color: var(--base);
 }
 
 .top-bar h1 {
@@ -166,11 +175,67 @@ a:hover {
 }
 
 .return a {
-    border: 2px solid black;
+    border: 2px solid var(--base);
     padding: 0.45em 1.5em;
     border-radius: 15px;
 }
 
 .gallery {
 
+}
+
+.mail-section {
+    text-align: center;
+    font-size: 35px;
+}
+
+.mail-section p {
+    font-size: 16px;
+}
+
+.mail-section h3 {
+    margin: 0;
+}
+
+.mail-section input {
+    width: 450px;
+    height: 25px;
+    font-family: Kanit;
+}
+
+.mail-section button {
+    font-family: Kanit;
+    padding: 7.9px 70px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--special);
+}
+
+.exist-section {
+    margin: 3em 15em 0 15em;
+    padding-bottom: 5em;
+    border-radius: 25px;
+    background-color: var(--base);
+    color: var(--secondary)
+}
+
+.exist-section h3 {
+    text-align: center;
+    padding-top: 2em;
+    font-size: 30px;
+    color: var(--secondary);
+}
+
+.exist-section li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.exist-section p {
+    margin: 0;
+}
+
+.exist-section div {
+    margin: 4em 0;
 }
