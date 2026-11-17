@@ -127,16 +127,20 @@ html, body {
     margin: 2em;
 }
 
-.status-card a {
+.status-card button {
     font-size: 19px;
     text-decoration: none;
     color: var(--base);
     margin-bottom: 17.5px;
     transition: 0.2s;
     font-weight: 650;
+    background-color: transparent;
+    border: none;
+    font-family: Kanit;
+    text-align: left;
 }
 
-.status-card a:hover {
+.status-card button:hover {
     transition: 0.2s;
     color: white;
 }

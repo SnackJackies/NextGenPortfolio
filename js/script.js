@@ -20,8 +20,21 @@ let img2025 = []
 const card1 = document.querySelector("#card1");
 const card2 = document.querySelector("#card2");
 
-const myowngallery = document.querySelector("#myowngallery");
-const fakbok = document.querySelector("#fakbok")
+const myowngallery = document.querySelector("#fakbok")
+
+const igclipboard = document.querySelector("#igclipboard");
+const fakbok = document.querySelector("#myowngallery");
+const dscclipboard = document.querySelector("#dscclipboard")
+
+igclipboard.addEventListener("click", () => {
+    alert("Instagram : snackjxckies (Copied to Clipboard!)");
+    navigator.clipboard.writeText("snackjxckies");
+})
+
+dscclipboard.addEventListener("click", () => {
+    alert("Discord : snackjackies (Copied to Clipboard!)")
+    navigator.clipboard.writeText("snackjackies");
+})
 
 if (card1 && card2) {
     fetch("./json/message.json")
