@@ -58,6 +58,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin-top: 3em;
+    width: 100%;
 }
 
 .upper-card {
@@ -67,6 +68,7 @@ html, body {
     border-radius: 45px;
     padding: 2.5em 5.5em;
     box-shadow: 5px 7.5px var(--special);
+    width: 85%;
 }
 
 .upper-card img {
@@ -76,6 +78,7 @@ html, body {
 
 .heading p {
     color: var(--secondary);
+    font-size: 3em;
 }
 
 .heading p span {
@@ -106,10 +109,18 @@ html, body {
     margin-bottom: 12.5em;
 }
 
+@media (max-width: 500px) {
+    .upper-card {
+        /* margin: 1.5em 7.25em; */
+        width: 85%;
+    }
+
+}
+
 .status-card {
     border: 2px solid var(--special);
     border-radius: 25px;
-    width: 25.5em;
+    width: min(100%, 400px);
     background-color: rgba(255, 255, 255, 0.5);
     filter: drop-shadow(2px 2px 3.25px rgb(235, 179, 232));
 }
@@ -129,7 +140,7 @@ html, body {
     padding-bottom: 3em;
 }
 
-.status-card button {
+.status-card a {
     font-size: 19px;
     text-decoration: none;
     color: var(--base);
@@ -157,6 +168,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
 }
 
 .middle-bg div {
@@ -167,7 +179,7 @@ html, body {
 
 .middle-bg h4 {
     margin: 1.5em 1.5em; 
-    font-size: 60px;
+    font-size: min(45px, 60px);
     color: var(--secondary)
 }
 
@@ -180,12 +192,13 @@ html, body {
 .middle-bg a {
     color: var(--secondary);
     padding: 0.5em 2em;
-    border: 2px solid white;
+    border: 2px solid lightgray;
     border-radius: 45px;
     text-decoration: none;
     text-align: center;
     font-size: 25px;
     margin: 0 0 0 2em;
+    background-color: var(--secondary);
 }
 
 
@@ -245,7 +258,7 @@ html, body {
 }
 
 .mail-section input {
-    width: 450px;
+    width: min(80%, 450px);
     height: 25px;
     font-family: Kanit;
 }
@@ -264,7 +277,8 @@ html, body {
     padding-bottom: 5em;
     border-radius: 25px;
     background-color: var(--base);
-    color: var(--secondary)
+    color: var(--secondary);
+    width: min(80%, 1200px);
 }
 
 .exist-section h3 {
@@ -290,7 +304,7 @@ html, body {
 }
 
 .exist-box {
-    margin: 2.5em 0;
+    margin: 2.5em 1.5em;
     padding-left: 4px;
     border-left: 3px solid var(--special);
 }
@@ -298,4 +312,15 @@ html, body {
 .gallery-hide {
     display: none;
     transition: 0.2s
+}
+
+@media (max-width: 789px) {
+    .rows-card {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .exist-section {
+        margin: 3em 2em 0 2em;
+    }
 }
